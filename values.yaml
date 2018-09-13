@@ -127,7 +127,7 @@ Master:
       kubernetes.io/tls-acme: "true"
 
     TLS:
-      - secretName: jenkins.codeforfun.cn
+      - secretName: jenkins.codeforfun.cn-secret
         hosts:
           - jenkins.codeforfun.cn
 

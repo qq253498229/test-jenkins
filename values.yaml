@@ -122,14 +122,14 @@ Master:
 
   Ingress:
     ApiVersion: extensions/v1beta1
-    Annotations: {}
-    # kubernetes.io/ingress.class: nginx
-    # kubernetes.io/tls-acme: "true"
+    Annotations:
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: "true"
 
     TLS:
-    # - secretName: jenkins.cluster.local
-    #   hosts:
-    #     - jenkins.cluster.local
+      - secretName: jenkins.codeforfun.cn
+        hosts:
+          - jenkins.codeforfun.cn
 
 Agent:
   Enabled: true
@@ -177,7 +177,7 @@ Persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # StorageClass: "-"
+  StorageClass: "jenkins-sc"
 
   Annotations: {}
   AccessMode: ReadWriteOnce
